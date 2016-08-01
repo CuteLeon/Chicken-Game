@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC082388-FEAB-4782-872E-EC1D73ABA210}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>爱吃蔬果的小鸡.My.MyApplication</StartupObject>
+    <RootNamespace>爱吃蔬果的小鸡</RootNamespace>
+    <AssemblyName>爱吃蔬果的小鸡</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>爱吃蔬果的小鸡.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>爱吃蔬果的小鸡.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Chick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameForm.Designer.vb">
+      <DependentUpon>GameForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameResource.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LevelForm.Designer.vb">
+      <DependentUpon>LevelForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LevelForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalData.vb" />
+    <Compile Include="LoadingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.vb">
+      <DependentUpon>LoadingForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameResource.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameResource.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelForm.resx">
+      <DependentUpon>LevelForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameGround_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameGround_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameGround_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameGround_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBar_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetable_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameGround_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LevelBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\小鸡快跑-Loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
