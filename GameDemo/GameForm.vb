@@ -150,6 +150,9 @@ Public Class GameForm
         GameGraphics.Dispose()
 
         If HP = 0 Then GameOver()
+
+        '强制回收内存
+        GC.Collect()
     End Sub
 
     Private Sub ThrowVegetable()
